@@ -6,7 +6,7 @@ After the collection of all data, we ran our notebook ```notebooks/EDA/response-
 
 Finally, we ran ```python scripts/reports_by_participants.py``` to generate the reports for each participant in order to ensure no single participant skewed the results.
 
-All collected data is removed from this repository. Please contact sifatul.anindho@colostate.edu if you want to use our data under the terms of conditions the participants consented to.
+All collected data is removed from this repository. Please contact sifatul.anindho@colostate.edu if you want to use our data under the terms and conditions the participants consented to.
 
 
 ## Requirements
