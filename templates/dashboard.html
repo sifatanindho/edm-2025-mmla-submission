@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Video Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Feedback Dashboard</h1>
+        <div class="card">
+            <h2>Group ID</h2>
+            <div class="input-group">
+                <input type="number" id="group-id" placeholder="Enter group ID...">
+            </div>
+        </div>
+        <div class="card">
+            <h2>Participant ID</h2>
+            <div class="input-group">
+                <input type="number" id="participant-id" placeholder="Enter participant ID...">
+            </div>
+        </div>
+        <div class="card">
+            <h2>Video Selection</h2>
+            <div id="video-select-container">
+                <select id="video-select">
+                    <option value="">Select a video...</option>
+                </select>
+            </div>
+            
+            <div id="video-preview">
+                <h3>Preview</h3>
+                <video id="preview-player" controls></video>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Feedback Labels</h2>
+            <div id="labels-container">
+                <ul id="label-list"></ul>
+                <div class="input-group">
+                    <input type="text" id="new-label" placeholder="New label...">
+                    <button id="add-label" class="button secondary">Add</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Probe Settings</h2>
+            <div class="input-group">
+                <label for="probe-frequency">Prompt every </label>
+                <input type="number" id="probe-frequency" min="10" value="60">
+                <span> seconds</span>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button id="start-session" class="button primary">Start Feedback Session</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
